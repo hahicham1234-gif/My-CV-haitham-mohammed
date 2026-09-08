@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="هيثم محمد محمد نجاد - مهندس تقنية معلومات">
+<title>هيثم محمد محمد نجاد | IT Engineer</title>
+
+<style>
+.section-icons {
+  display: flex;
+  gap: 12px;
+}
+.section img {
+  width: 43px;
+  height: 44px;
+  border-radius: 55%;
+  background-color: #2f4e83;
+  /* display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none; */
+}
+/* .section img{
+  /* width: 22px;
+  height: 22px;
+  object-fit: contain; */
+  /* filter: brightness(0) invert(1); */
+} */
+.section-icons a:hover {
+  transform: scale(1.1);
+}
+:root{
+  --primary:#10202d;
+/* Language-specific ATS layout */
+#enCv, #enCv .main, #enCv .sidebar, #enCv .section,
+#enCv .experience, #enCv .project, #enCv .education,
+#enCv .summary, #enCv p, #enCv li, #enCv .skill-text,
+#enCv .keyword-box, #enCv .links, #enCv .side-contact{
+  direction:ltr;
+  text-align:left;
+}
+#enCv .section-title{
+  direction:ltr;
+  justify-content:flex-start;
+}
+#enCv .section-title:before{order:0}
+#enCv ul{padding-left:18px;padding-right:0}
+#enCv .side-list{padding-left:18px;padding-right:0}
+#enCv .contact-bar{direction:ltr}
+
+#arCv .layout{
+  grid-template-columns:minmax(0,1fr) 285px;
+  grid-template-areas:"main side";
+}
+#arCv .main{
+  border-left:1px solid var(--line);
+  border-right:0;
+}
+#enCv .layout{
+  grid-template-columns:285px minmax(0,1fr);
+  grid-template-areas:"side main";
+}
+#enCv .main{
+  border-right:1px solid var(--line);
+  border-left:0;
+}
+#enCv .sidebar{
+  border-left:0;
+  border-right:0;
+}
+
+  --secondary:#0e7c7b;
+  --primary2:#183847;
+  --light:#eef7f7;
+  --text:#394650;
+  --muted:#71808a;
+  --line:#d8e1e5;
+  --paper:#fff;
+  --bg:#eef2f4;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  background:var(--bg);
+  color:var(--text);
+  font-family:Arial,Tahoma,"Noto Sans Arabic",sans-serif;
+  font-size:14px;line-height:1.65;
+}
+button{font-family:inherit}
+.toolbar{
+  width:1000px;max-width:calc(100% - 20px);margin:14px auto 10px;
+  display:flex;align-items:center;justify-content:flex-start;gap:7px;
+  direction:ltr;position:relative;z-index:20;
+}
+.toolbar button{
+  border:0;border-radius:7px;padding:9px 13px;cursor:pointer;
+  background:var(--primary);color:#fff;font-weight:700;font-size:12px;
+}
+.toolbar button:hover{background:var(--secondary)}
+.luxury-color{background:linear-gradient(135deg,#10202d,#183847)!important;color:#fff;border:1px solid #31505d!important;box-shadow:0 5px 14px #10202d2b}
+.toolbar .outline{background:#fff;color:var(--primary);border:1px solid var(--line)}
+.cv{
+  width:1000px;max-width:calc(100% - 20px);margin:0 auto 40px;
+  background:var(--paper);box-shadow:0 15px 45px #10202d22;overflow:hidden;
+}
+.header{
+  position:relative;background:linear-gradient(135deg,var(--primary),var(--primary2));
+  color:#fff;padding:39px 52px 32px;overflow:hidden;
+}
+.header:before,.header:after{
+  content:"";position:absolute;border:1px solid #ffffff16;border-radius:50%;
+}
+.header:before{width:280px;height:280px;left:-100px;bottom:-190px}
+.header:after{width:200px;height:200px;right:-100px;top:-130px}
+.header-inner{position:relative;z-index:1}
+.label{margin:0 0 4px;color:#91d5d1;font-size:10px;font-weight:800;letter-spacing:2.5px;direction:ltr}
+.name{margin:0;font-size:34px;line-height:1.2;font-weight:800}
+.job-title{font-size:17px;font-weight:700;color:#e9ffff;margin:6px 0 11px}
+.header-summary{max-width:860px;margin:0 0 14px;color:#e1ecef;font-size:12px;line-height:1.8}
+.keywords{display:flex;gap:6px;flex-wrap:wrap}
+.keywords span{
+  border:1px solid #ffffff2b;background:#ffffff12;border-radius:20px;
+  padding:3px 10px;font-size:10px;color:#f4ffff;
+}
+.contact-bar{
+  display:flex;flex-wrap:wrap;gap:7px 25px;padding:11px 52px;
+  border-bottom:1px solid var(--line);background:#fff;font-size:11px;
+}
+.contact-item{display:flex;align-items:center;gap:6px;white-space:nowrap}
+.icon{width:17px;height:17px;display:inline-flex;color:var(--secondary);flex:none}
+.icon svg{width:100%;height:100%;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.contact-item a{color:var(--text);text-decoration:none}
+.layout{
+  display:grid;grid-template-columns:minmax(0,1fr) 285px;
+  grid-template-areas:"main side";direction:ltr;
+}
+.main{grid-area:main;direction:rtl;padding:28px 40px 35px 43px;border-left:1px solid var(--line)}
+.sidebar{grid-area:side;direction:rtl;padding:26px 24px 30px;background:#fbfcfc}
+.section{margin-bottom:25px}
+.section:last-child{margin-bottom:0}
+.section-title{
+  display:flex;align-items:center;gap:8px;margin:0 0 9px;padding-bottom:5px;
+  border-bottom:2px solid var(--secondary);color:var(--primary);font-size:16px;font-weight:800;
+}
+.section-title:before{content:"";width:5px;height:20px;background:var(--secondary);border-radius:4px}
+.sidebar .section{margin-bottom:23px}
+.sidebar .section-title{font-size:14px;border-bottom:1px solid var(--secondary);margin-bottom:10px}
+.summary{text-align:justify;margin:0}
+.experience,.project{
+  padding-bottom:14px;margin-bottom:15px;border-bottom:1px solid #e7edef;
+}
+.experience:last-child,.project:last-child{border-bottom:0;margin-bottom:0;padding-bottom:0}
+h3{margin:0}
+.experience-title,.project-title{font-size:13.5px;color:var(--primary);font-weight:800}
+.experience-meta,.project-tech{color:var(--secondary);font-size:10.5px;font-weight:700;margin:2px 0 6px}
+.project-tech{direction:ltr;text-align:right}
+ul{margin:0;padding-right:19px}
+li{margin:3px 0}
+.education{
+  border-right:3px solid var(--secondary);background:#f9fbfb;padding:9px 12px;margin-bottom:9px
+}
+.education-title{font-size:13px;color:var(--primary);font-weight:800}
+.education-meta{font-size:10.5px;color:var(--muted)}
+.side-contact{display:flex;flex-direction:column;gap:9px}
+.side-contact-item{display:flex;align-items:flex-start;gap:8px;font-size:10.5px;overflow-wrap:anywhere}
+.side-contact-item .icon{margin-top:2px}
+.side-contact-item strong{display:block;color:var(--primary);font-size:9.5px}
+.side-contact-item a{color:var(--text);text-decoration:none}
+.skill-group{margin-bottom:12px}
+.skill-name{font-size:11.5px;color:var(--primary);font-weight:800;margin-bottom:2px}
+.skill-text{font-size:10.2px;margin:0;line-height:1.65}
+.skill-level{font-size:9px;color:var(--secondary);font-weight:700}
+.side-list{padding-right:18px}
+.side-list li{font-size:10.8px;margin:3px 0}
+.language{margin-bottom:8px}
+.language-name{font-size:11px;color:var(--primary);font-weight:800}
+.language-level{font-size:10px;color:var(--muted)}
+.links{display:flex;flex-direction:column;gap:6px}
+.links a{font-size:10px;color:var(--secondary);text-decoration:none;overflow-wrap:anywhere}
+.keyword-box{
+  padding:10px 12px;background:var(--light);border:1px solid #cde1e1;border-radius:7px;
+  font-size:10px;line-height:1.8;color:#24494a;
+}
+.footer{
+  display:flex;justify-content:space-between;border-top:1px solid var(--line);
+  padding:8px 35px;font-size:9px;color:var(--muted)
+}
+.en{direction:ltr;text-align:left}
+[hidden]{display:none!important}
+
+
+/* ===== Dark mode toggle ===== */
+:root.dark-mode{--primary:#10202d;--primary2:#183847;--secondary:#0e7c7b;--light:#18282c;--text:#eaf1f4;--muted:#aab9c1;--line:#2a3a43}
+.dark-mode body{background:#050b10;color:#eaf1f4}
+.dark-mode .cv{background:#0b151c!important;color:#eaf1f4;box-shadow:0 15px 45px #00000088}
+.dark-mode .main,.dark-mode .content,.dark-mode .section,.dark-mode .profile,.dark-mode .experience,.dark-mode .skills,.dark-mode .projects,.dark-mode .certifications{background:#0b151c!important;color:#eaf1f4}
+.dark-mode .card,.dark-mode .item,.dark-mode .project,.dark-mode .certification,.dark-mode .skill-card{background:#101d25!important;color:#eaf1f4;border-color:#2a3a43}
+.dark-mode .contact-bar{background:#111a22}
+.dark-mode .sidebar{background:#0e171e}
+.dark-mode .education{background:#142128}
+.dark-mode .keyword-box{background:#13282a;border-color:#285658;color:#d7eeee}
+.dark-mode .cv *{border-color:#2a3a43}
+.dark-mode .cv a{color:#8dd7d5}
+.dark-mode .toolbar .outline{background:#111a22;color:#eaf1f4;border-color:#2a3a43}
+.dark-mode .toolbar .luxury-color{background:linear-gradient(135deg,#071018,#183847)!important}
+.dark-mode .contact-item a,.dark-mode .side-contact-item a{color:#eaf1f4}
+@media(max-width:780px){
+  body{background:#fff}
+  .toolbar{width:100%;max-width:none;padding:8px 10px;margin:0;background:#fff;position:sticky;top:0}
+  .toolbar button{padding:8px 9px;font-size:10px}
+  .cv{width:100%;max-width:none;margin:0;box-shadow:none}
+  .header{padding:30px 22px 25px}
+  .name{font-size:27px}.job-title{font-size:14px}.header-summary{font-size:10.5px}
+  .contact-bar{padding:10px 22px;flex-direction:column;gap:5px}
+  .layout{display:flex;flex-direction:column}
+  .main{order:1;border-left:0;border-right:0;padding:24px 22px}
+  .sidebar{order:2;border-top:1px solid var(--line);border-right:0;border-left:0;padding:24px 22px}
+  #enCv .main{border-right:0;border-left:0}
+  .footer{padding:8px 22px;flex-direction:column}
+}
+
+@media print{
+  :root.dark-mode{--primary:#10202d!important;--primary2:#183847!important;--secondary:#0e7c7b!important;--light:#eef7f7!important;--text:#394650!important;--muted:#71808a!important;--line:#d8e1e5!important}
+  .dark-mode body{background:#fff!important;color:#394650!important}
+  .dark-mode .cv,.dark-mode .main,.dark-mode .content,.dark-mode .section,.dark-mode .profile,.dark-mode .experience,.dark-mode .skills,.dark-mode .projects,.dark-mode .certifications{background:#fff!important;color:#394650!important}
+  .dark-mode .contact-bar{background:#fff!important}
+  .dark-mode .sidebar{background:#fbfcfc!important}
+  .dark-mode .education{background:#f9fbfb!important}
+  .dark-mode .keyword-box{background:#eef7f7!important;border-color:#cde1e1!important;color:#24494a!important}
+
+  :root.dark-mode{--primary:#10202d!important;--primary2:#183847!important;--secondary:#0e7c7b!important;--light:#eef7f7!important;--text:#394650!important;--muted:#71808a!important;--line:#d8e1e5!important}
+  .dark-mode body{background:#fff}
+  .dark-mode .contact-bar{background:#fff}
+  .dark-mode .sidebar{background:#fbfcfc}
+  .dark-mode .education{background:#f9fbfb}
+  .dark-mode .keyword-box{background:#eef7f7;border-color:#cde1e1;color:#24494a}
+}
+@media print{
+  @page{size:A4;margin:6mm}
+  body{background:#fff;font-size:8.3pt;line-height:1.43}
+  .toolbar{display:none!important}
+  .cv{width:100%;max-width:none;margin:0;box-shadow:none;overflow:visible}
+  .header{padding:22px 31px 19px;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .label{font-size:7pt}.name{font-size:21pt}.job-title{font-size:9.5pt;margin:3px 0 6px}
+  .header-summary{font-size:7.3pt;line-height:1.5;margin-bottom:6px}
+  .keywords{gap:3px}.keywords span{font-size:6.5pt;padding:2px 6px}
+  .contact-bar{padding:6px 31px;font-size:6.9pt;gap:3px 13px}
+  .layout{grid-template-columns:minmax(0,1fr) 198px}
+  #arCv .layout{grid-template-columns:minmax(0,1fr) 198px;grid-template-areas:"main side"}
+  #enCv .layout{grid-template-columns:198px minmax(0,1fr);grid-template-areas:"side main"}
+  #arCv .main{border-left:1px solid var(--line);border-right:0}
+  #enCv .main{border-right:1px solid var(--line);border-left:0}
+  .main{padding:15px 22px 17px 24px}.sidebar{padding:14px 14px 16px}
+  .section{margin-bottom:11px;break-inside:avoid}
+  .section-title{font-size:9.2pt;margin-bottom:4px;padding-bottom:2px}
+  .section-title:before{width:3px;height:12px}
+  .sidebar .section{margin-bottom:10px}.sidebar .section-title{font-size:8pt;margin-bottom:4px}
+  .summary{font-size:7.2pt}.experience,.project{padding-bottom:5px;margin-bottom:6px}
+  .experience-title,.project-title{font-size:7.8pt}.experience-meta,.project-tech{font-size:6.4pt;margin:1px 0 2px}
+  ul{padding-right:13px}li{font-size:6.8pt;margin:1px 0}
+  .education{padding:4px 6px;margin-bottom:3px}.education-title{font-size:7.3pt}.education-meta{font-size:6.3pt}
+  .side-contact{gap:4px}.side-contact-item{font-size:6.6pt}.side-contact-item strong{font-size:6.1pt}
+  .skill-group{margin-bottom:5px}.skill-name{font-size:7pt}.skill-text{font-size:6.4pt;line-height:1.4}.skill-level{font-size:5.8pt}
+  .side-list li{font-size:6.5pt}.language{margin-bottom:3px}.language-name{font-size:6.8pt}.language-level{font-size:6.2pt}
+  .links{gap:2px}.links a{font-size:6.2pt}.keyword-box{font-size:6.2pt;padding:4px 6px;line-height:1.5}
+  .footer{padding:4px 22px;font-size:5.8pt}
+  a{color:#000!important;text-decoration:none!important}
+}
+</style>
+</head>
+
+<body>
+
+<div class="toolbar" aria-label="CV controls">
+  <button id="printBtn" type="button">🖨 طباعة</button>
+  <button id="pdfBtn" type="button" title="اختَر Save as PDF من نافذة الطباعة">📄 حفظ PDF</button>
+
+  <button id="colorBtn" type="button" class="luxury-color" aria-pressed="false">🌙  </button>
+
+  <button id="langBtn" type="button">🌐 En</button>
+</div>
+
+
+<main class="cv">
+
+<!-- ======================= ARABIC ======================= -->
+<div id="arCv">
+
+<header class="header">
+  <div class="header-inner">
+    <p class="label">INFORMATION TECHNOLOGY</p>
+    <h1 class="name">هيثم محمد محمد نجاد</h1>
+    <div class="job-title">مهندس تقنية معلومات | IT Engineer | Software Engineer</div>
+    <p class="header-summary">
+      مهندس تقنية معلومات ذو خلفية في إدارة الشبكات، تطوير البرمجيات، تطوير مواقع الويب،
+      تحليل وتصميم الأنظمة، وقواعد البيانات. لدي خبرة عملية في تركيب وصيانة شبكات LAN،
+      إعداد وتكوين Routers وSwitches، إدارة عناوين IP، تشخيص مشاكل الاتصال، وتطبيق أساسيات
+      IP/TCP وأمن الشبكات. كما لدي خبرة في تطوير الأنظمة والتطبيقات باستخدام لغات برمجية
+      متعددة وربط الأنظمة بقواعد البيانات.
+    </p>
+    <div class="keywords">
+      <span>Networking</span><span>Software Development</span><span>Web Development</span>
+      <span>Databases</span><span>IT</span>
+    </div>
+  </div>
+</header>
+
+<!-- <div class="contact-bar">
+  <div class="contact-item">
+    <span class="icon"><svg viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.7 19.7 0 0 1-8.6-3.1 19.3 19.3 0 0 1-6-6A19.7 19.7 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.9a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.5c.9.3 1.9.6 2.9.7A2 2 0 0 1 22 16.9z"/></svg></span>
+    <a href="tel:+967774029980" dir="ltr">+967 774029980</a>
+  </div>
+  <div class="contact-item">
+    <span class="icon"><svg viewBox="0 0 24 24"><path d="M4 4h16v16H4z"/><path d="m4 6 8 6 8-6"/></svg></span>
+    <a href="mailto:haithammohammad54@gmail.com" dir="ltr">haithammohammad54@gmail.com</a>
+  </div>
+  <div class="contact-item">
+    <span class="icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="10" r="3"/><path d="M19 10c0 5-7 11-7 11S5 15 5 10a7 7 0 1 1 14 0z"/></svg></span>
+    صنعاء - شارع الستين - حي النهضة
+  </div>
+</div> -->
+
+<div class="layout">
+<section class="main">
+
+<section class="section">
+<h2 class="section-title">الملخص المهني</h2>
+<p class="summary">
+مهندس تقنية معلومات ذو خلفية في إدارة الشبكات، تطوير البرمجيات، تطوير مواقع الويب،
+تحليل وتصميم الأنظمة، وقواعد البيانات. لدي خبرة عملية في تركيب وصيانة شبكات LAN،
+إعداد وتكوين Routers وSwitches، إدارة عناوين IP، تشخيص مشاكل الاتصال، وتطبيق أساسيات
+IP/TCP وأمن الشبكات. كما لدي خبرة في تطوير الأنظمة والتطبيقات باستخدام لغات برمجية
+متعددة وربط الأنظمة بقواعد البيانات.
+</p>
+</section>
+
+<section class="section">
+<h2 class="section-title">أبرز نقاط القوة</h2>
+<div class="experience">
+<h3 class="experience-title">Networking</h3>
+<p class="skill-text">LAN, Routers, Switches, TCP/IP</p>
+</div>
+<div class="experience">
+<h3 class="experience-title">Software Development</h3>
+<p class="skill-text">Programming, OOP, Web Development</p>
+</div>
+<div class="experience">
+<h3 class="experience-title">Databases</h3>
+<p class="skill-text">Oracle, SQL Server, PL/SQL, MySQL</p>
+</div>
+</section>
+
+<section class="section">
+<h2 class="section-title">الخبرات</h2>
+
+<article class="experience">
+<h3 class="experience-title">مهندس شبكات - عمل خاص</h3>
+<div class="experience-meta">خبرة عملية لمدة 3 سنوات</div>
+<ul>
+<li>تركيب وصيانة شبكات LAN.</li>
+<li>إعداد وتكوين Routers وSwitches وإدارة عناوين IP.</li>
+<li>تشخيص وحل مشاكل الشبكات والاتصال بالإنترنت وتقديم الدعم الفني.</li>
+<li>تطبيق أساسيات Network Security وبروتوكول TCP/IP.</li>
+</ul>
+</article>
+
+<article class="experience">
+<h3 class="experience-title">مبرمج ومطور مواقع ويب وأنظمة برمجية</h3>
+<div class="experience-meta">Software Development &amp; Web Development &amp; Software Engineer</div>
+<ul>
+<li>تطوير مواقع ويب وأنظمة وتطبيقات برمجية.</li>
+<li>استخدام لغات برمجية متعددة في تطوير الحلول البرمجية.</li>
+<li>تطبيق مفاهيم Object-Oriented Programming (OOP).</li>
+<li>ربط الأنظمة بقواعد البيانات.</li>
+</ul>
+</article>
+
+<article class="experience">
+<h3 class="experience-title">مشاريع تقنية عملية</h3>
+<div class="experience-meta">System Development</div>
+<ul>
+<li>تنفيذ مشروع نظام إدارة المدارس.</li>
+<li>تنفيذ مشروع نظام إدارة محاسبي.</li>
+<li>تنفيذ مشروع نظام منصة توظيف مدعومة بذكاء اصطناعي.</li>
+</ul>
+</article>
+</section>
+
+<section class="section">
+<h2 class="section-title">المشاريع</h2>
+
+<article class="project">
+<h3 class="project-title">نظام إدارة المدارس</h3>
+<p>مشروع عملي لتطوير نظام برمجي لإدارة العمليات والبيانات المدرسية.</p>
+</article>
+
+<article class="project">
+<h3 class="project-title">نظام إدارة محاسبي</h3>
+<p>مشروع عملي لتطوير نظام برمجي لإدارة عمليات وبيانات محاسبية.</p>
+</article>
+
+<article class="project">
+<h3 class="project-title">نظام منصة توظيف مدعومة بذكاء اصطناعي</h3>
+<p>مشروع عملي لتطوير نظام برمجي لإدارة عمليات وبيانات منصة توظيف مدعومة بذكاء اصطناعي.</p>
+</article>
+
+<article class="project">
+<h3 class="project-title">تطوير مواقع الويب</h3>
+<p>تنفيذ مشاريع عملية في مجال Web Development.</p>
+</article>
+
+<article class="project">
+<h3 class="project-title">أنظمة وتطبيقات برمجية</h3>
+<p>تطوير أنظمة باستخدام لغات برمجية متعددة وربطها بقواعد البيانات.</p>
+</article>
+</section>
+
+<section class="section">
+<h2 class="section-title">التعليم والمؤهلات الأكاديمية</h2>
+<div class="education">
+<h3 class="education-title">درجة البكالوريوس في تقنية المعلومات</h3>
+<div class="education-meta">جامعة الرازي | 2023 - 2026</div>
+</div>
+<div class="education">
+<h3 class="education-title">دورة في كتابة المحتوى والتسويق الرقمي</h3>
+</div>
+</section>
+
+<section class="section">
+<h2 class="section-title">الدورات</h2>
+<ul>
+<li>كتابة المحتوى والتسويق الرقمي.</li>
+<li>أساسيات الذكاء الاصطناعي وتعلم الآلة.</li>
+</ul>
+</section>
+
+</section>
+
+<aside class="sidebar">
+
+<section class="section">
+<h2 class="section-title">معلومات التواصل</h2>
+<div class="side-contact">
+<div class="side-contact-item">
+<span class="icon"><svg viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.7 19.7 0 0 1-8.6-3.1 19.3 19.3 0 0 1-6-6A19.7 19.7 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.9a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.5c.9.3 1.9.6 2.9.7A2 2 0 0 1 22 16.9z"/></svg></span>
+<div><strong></strong><a href="tel:+967774029980" dir="ltr">+967 774029980</a></div>
+</div>
+<div class="side-contact-item">
+<span class="icon"><svg viewBox="0 0 24 24"><path d="M4 4h16v16H4z"/><path d="m4 6 8 6 8-6"/></svg></span>
+<div><strong></strong><a href="mailto:haithammohammad54@gmail.com" dir="ltr">haithammohammad54@gmail.com</a></div>
+</div>
+<div class="side-contact-item">
+<span class="icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="10" r="3"/><path d="M19 10c0 5-7 11-7 11S5 15 5 10a7 7 0 1 1 14 0z"/></svg></span>
+<div><strong></strong>صنعاء - شارع الستين - حي النهضة</div>
+</div>
+</div>
+</section>
+
+<section class="section">
+<h2 class="section-title">المهارات التقنية</h2>
+
+<div class="skill-group"><h3 class="skill-name">Programming Languages</h3><p class="skill-text">Python, Java, C++, JavaScript, C#</p></div>
+<div class="skill-group"><h3 class="skill-name">Networking</h3><p class="skill-text">LAN, Routers, Switches, IP Addressing, TCP/IP, Network Security, Troubleshooting</p></div>
+<div class="skill-group"><h3 class="skill-name">Software Development</h3><p class="skill-text">Software Development, OOP, System Development, Database Integration</p></div>
+<div class="skill-group"><h3 class="skill-name">Databases</h3><p class="skill-text">Oracle, SQL Server, PL/SQL, MySQL</p></div>
+<div class="skill-group"><h3 class="skill-name">Web Development</h3><p class="skill-text">Web Development and Website Programming</p></div>
+<div class="skill-group"><h3 class="skill-name">Data Analysis</h3><p class="skill-text">تحليل البيانات.</p></div>
+<div class="skill-group"><h3 class="skill-name">Code Quality</h3><p class="skill-text">كتابة كود منظم وقابل للصيانة وحل المشكلات البرمجية.</p></div>
+</section>
+
+<section class="section">
+<h2 class="section-title">المهارات الشخصية</h2>
+<ul class="side-list">
+<li>العمل مع الفريق.</li><li>حل المشكلات.</li><li>مهارات التواصل.</li>
+<li>التخطيط.</li><li>اتخاذ القرارات.</li><li>التحليل.</li><li>سرعة التعلم والطموح.</li>
+</ul>
+</section>
+
+<section class="section">
+<h2 class="section-title">اللغات</h2>
+<div class="language"><div class="language-name">العربية</div><div class="language-level">لغة الأم.</div></div>
+<div class="language"><div class="language-name">الإنجليزية</div><div class="language-level">جيد جدًا.</div></div>
+</section>
+
+<section class="section">
+<h2 class="section-title">Technical Skills &amp; Keywords</h2>
+<div class="keyword-box">
+Information Technology, IT Engineer, Network Administration, Networking, LAN,
+Routers, Switches, IP Addressing, TCP/IP, Network Security, Network Troubleshooting,
+Technical Support, Python, Java, C++, JavaScript, C#, Web Development,
+Software Development, Object-Oriented Programming, OOP, Database Management,
+Oracle, SQL Server, PL/SQL, MySQL, Data Analysis, System Development,
+Database Integration
+</div>
+</section>
+
+<section class="section">
+<h2 class="section-title">الروابط المهنية</h2>
+<div class="social-icons">
+<a href="https://github.com/haitham12345678/" target="_blank"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"></a>
+<a href="https://www.linkedin.com/in/haitham-mohammad-5589bb356/" target="_blank"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg"></a>
+</div>
+</div>
+</section>
+
+</aside>
+</div>
+
+</div>
+
+
+<!-- ======================= ENGLISH ======================= -->
+<div id="enCv" hidden lang="en" dir="ltr">
+
+<header class="header">
+  <div class="header-inner">
+    <p class="label">INFORMATION TECHNOLOGY</p>
+    <h1 class="name">Haitham Mohammad Mohammad Najad</h1>
+    <div class="job-title">IT Engineer | Software Engineer</div>
+    <p class="header-summary">
+      Information Technology Engineer with a background in network administration,
+      software development, web development, systems analysis and design, and databases.
+      Practical experience in installing and maintaining LAN networks, configuring routers
+      and switches, managing IP addresses, troubleshooting connectivity issues, and applying
+      TCP/IP and network security fundamentals. Experienced in developing systems and
+      applications using multiple programming languages and integrating systems with databases.
+    </p>
+    <div class="keywords">
+      <span>Networking</span><span>Software Development</span><span>Web Development</span>
+      <span>Databases</span><span>IT</span>
+    </div>
+  </div>
+</header>
+
+<!-- <div class="contact-bar en">
+  <div class="contact-item">
+    <span class="icon"><svg viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.7 19.7 0 0 1-8.6-3.1 19.3 19.3 0 0 1-6-6A19.7 19.7 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.9a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.5c.9.3 1.9.6 2.9.7A2 2 0 0 1 22 16.9z"/></svg></span>
+    <a href="tel:+967774029980">+967 774029980</a>
+  </div>
+  <div class="contact-item">
+    <span class="icon"><svg viewBox="0 0 24 24"><path d="M4 4h16v16H4z"/><path d="m4 6 8 6 8-6"/></svg></span>
+    <a href="mailto:haithammohammad54@gmail.com">haithammohammad54@gmail.com</a>
+  </div>
+  <div class="contact-item">
+    <span class="icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="10" r="3"/><path d="M19 10c0 5-7 11-7 11S5 15 5 10a7 7 0 1 1 14 0z"/></svg></span>
+    Sanaa - Al-Sittin - Al-Nahda neighborhood
+  </div>
+</div> -->
+
+<div class="layout">
+<section class="main">
+
+<section class="section">
+<h2 class="section-title">Professional Summary</h2>
+<p class="summary">
+Information Technology Engineer with a background in network administration, software
+development, web development, systems analysis and design, and databases. Practical
+experience in LAN installation and maintenance, router and switch configuration, IP address
+management, connectivity troubleshooting, TCP/IP fundamentals, and network security.
+Experienced in developing systems and applications using multiple programming languages
+and integrating systems with databases.
+</p>
+</section>
+
+<section class="section">
+<h2 class="section-title">Key Strengths</h2>
+<div class="experience"><h3 class="experience-title">Networking</h3><p class="skill-text">LAN, Routers, Switches, TCP/IP</p></div>
+<div class="experience"><h3 class="experience-title">Software Development</h3><p class="skill-text">Programming, OOP, Web Development</p></div>
+<div class="experience"><h3 class="experience-title">Databases</h3><p class="skill-text">Oracle, SQL Server, PL/SQL, MySQL</p></div>
+</section>
+
+<section class="section">
+<h2 class="section-title">Experience</h2>
+
+<article class="experience">
+<h3 class="experience-title">Network Engineer - Freelance / Private Work</h3>
+<div class="experience-meta">3 years of practical experience</div>
+<ul>
+<li>Installed and maintained LAN networks.</li>
+<li>Configured routers and switches and managed IP addresses.</li>
+<li>Diagnosed and resolved network and Internet connectivity issues and provided technical support.</li>
+<li>Applied network security fundamentals and TCP/IP protocols.</li>
+</ul>
+</article>
+
+<article class="experience">
+<h3 class="experience-title">Programmer and Web &amp; Software Systems Developer</h3>
+<div class="experience-meta">Software Development &amp; Web Development &amp; Software Engineer</div>
+<ul>
+<li>Developed websites, software systems, and applications.</li>
+<li>Used multiple programming languages to develop software solutions.</li>
+<li>Applied Object-Oriented Programming (OOP) concepts.</li>
+<li>Integrated systems with databases.</li>
+</ul>
+</article>
+
+<article class="experience">
+<h3 class="experience-title">Practical Technology Projects</h3>
+<div class="experience-meta">System Development</div>
+<ul>
+<li>Developed a school management system.</li>
+<li>Developed an accounting management system.</li>
+<li>Developed an AI-supported recruitment platform.</li>
+</ul>
+</article>
+</section>
+
+<section class="section">
+<h2 class="section-title">Projects</h2>
+<article class="project"><h3 class="project-title">School Management System</h3><p>A practical software project for managing school operations and data.</p></article>
+<article class="project"><h3 class="project-title">Accounting Management System</h3><p>A practical software project for managing accounting operations and data.</p></article>
+<article class="project"><h3 class="project-title">AI-Supported Recruitment Platform</h3><p>A practical software project for managing operations and data for an AI-supported recruitment platform.</p></article>
+<article class="project"><h3 class="project-title">Web Development</h3><p>Practical projects in web development.</p></article>
+<article class="project"><h3 class="project-title">Software Systems and Applications</h3><p>Developed systems using multiple programming languages and integrated them with databases.</p></article>
+</section>
+
+<section class="section">
+<h2 class="section-title">Education &amp; Academic Qualifications</h2>
+<div class="education"><h3 class="education-title">Bachelor's Degree in Information Technology</h3><div class="education-meta">Al-Razi University | 2023 - 2026</div></div>
+<div class="education"><h3 class="education-title">Digital Content Writing and Digital Marketing Course</h3></div>
+</section>
+
+<section class="section">
+<h2 class="section-title">Courses</h2>
+<ul><li>Digital Content Writing and Digital Marketing.</li><li>Fundamentals of Artificial Intelligence and Machine Learning.</li></ul>
+</section>
+
+</section>
+
+<aside class="sidebar">
+
+<section class="section">
+<h2 class="section-title">Contact Information</h2>
+<div class="side-contact">
+<div class="side-contact-item"><span class="icon"><svg viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.7 19.7 0 0 1-8.6-3.1 19.3 19.3 0 0 1-6-6A19.7 19.7 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.9a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.5c.9.3 1.9.6 2.9.7A2 2 0 0 1 22 16.9z"/></svg></span><div><strong></strong><a href="tel:+967774029980">+967 774029980</a></div></div>
+<div class="side-contact-item"><span class="icon"><svg viewBox="0 0 24 24"><path d="M4 4h16v16H4z"/><path d="m4 6 8 6 8-6"/></svg></span><div><strong></strong><a href="mailto:haithammohammad54@gmail.com">haithammohammad54@gmail.com</a></div></div>
+<div class="side-contact-item"><span class="icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="10" r="3"/><path d="M19 10c0 5-7 11-7 11S5 15 5 10a7 7 0 1 1 14 0z"/></svg></span><div><strong></strong>Sanaa - Al-Sittin - Al-Nahda neighborhood</div></div>
+</div>
+</section>
+
+<section class="section">
+<h2 class="section-title">Technical Skills</h2>
+<div class="skill-group"><h3 class="skill-name">Programming Languages</h3><p class="skill-text">Python, Java, C++, JavaScript, C#</p></div>
+<div class="skill-group"><h3 class="skill-name">Networking</h3><p class="skill-text">LAN, Routers, Switches, IP Addressing, TCP/IP, Network Security, Troubleshooting</p></div>
+<div class="skill-group"><h3 class="skill-name">Software Development</h3><p class="skill-text">Software Development, OOP, System Development, Database Integration</p></div>
+<div class="skill-group"><h3 class="skill-name">Databases</h3><p class="skill-text">Oracle, SQL Server, PL/SQL, MySQL</p></div>
+<div class="skill-group"><h3 class="skill-name">Web Development</h3><p class="skill-text">Web Development and Website Programming</p></div>
+<div class="skill-group"><h3 class="skill-name">Data Analysis</h3><p class="skill-text">Data Analysis.</p></div>
+<div class="skill-group"><h3 class="skill-name">Code Quality</h3><p class="skill-text">Writing organized and maintainable code and solving programming problems.</p></div>
+</section>
+
+<section class="section">
+<h2 class="section-title">Personal Skills</h2>
+<ul class="side-list"><li>Teamwork.</li><li>Problem solving.</li><li>Communication skills.</li><li>Planning.</li><li>Decision making.</li><li>Analysis.</li><li>Fast learning and ambition.</li></ul>
+</section>
+
+<section class="section">
+<h2 class="section-title">Languages</h2>
+<div class="language"><div class="language-name">Arabic</div><div class="language-level">Native.</div></div>
+<div class="language"><div class="language-name">English</div><div class="language-level">Very Good.</div></div>
+</section>
+
+<section class="section">
+<h2 class="section-title">Technical Skills &amp; Keywords</h2>
+<div class="keyword-box">
+Information Technology, IT Engineer, Network Administration, Networking, LAN,
+Routers, Switches, IP Addressing, TCP/IP, Network Security, Network Troubleshooting,
+Technical Support, Python, Java, C++, JavaScript, C#, Web Development,
+Software Development, Object-Oriented Programming, OOP, Database Management,
+Oracle, SQL Server, PL/SQL, MySQL, Data Analysis, System Development,
+Database Integration
+</div>
+</section>
+
+<section class="section">
+<h2 class="section-title">Professional Links</h2>
+<div class="social-icons">
+<a href="https://github.com/haitham12345678/" target="_blank"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"></a>
+<a href="https://www.linkedin.com/in/haitham-mohammad-5589bb356/" target="_blank"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg"></a>
+</section>
+
+</aside>
+</div>
+
+</div>
+
+</main>
+
+<script>
+const root=document.documentElement;
+const colorBtn=document.getElementById('colorBtn');
+const printBtn=document.getElementById('printBtn');
+const pdfBtn=document.getElementById('pdfBtn');
+const ar=document.getElementById('arCv');
+const en=document.getElementById('enCv');
+const langBtn=document.getElementById('langBtn');
+let currentLanguage='ar';
+
+function updateToolbarLanguage(){
+  const dark=root.classList.contains('dark-mode');
+  const isEnglish=currentLanguage==='en';
+
+  printBtn.textContent=isEnglish?'🖨 Print':'🖨 طباعة';
+  pdfBtn.textContent=isEnglish?'📄 Save PDF':'📄 حفظ PDF';
+  pdfBtn.title=isEnglish
+    ? 'Choose Save as PDF from the print dialog'
+    : 'اختَر Save as PDF من نافذة الطباعة';
+  colorBtn.textContent=isEnglish
+    ? (dark?'☀️':'🌙')
+    : (dark?'☀️':'🌙');
+  langBtn.textContent=isEnglish?'🌐 AR':'🌐 EN';
+}
+
+colorBtn.addEventListener('click',()=>{
+  const dark=root.classList.toggle('dark-mode');
+  colorBtn.setAttribute('aria-pressed',String(dark));
+  updateToolbarLanguage();
+});
+
+function printCV(){
+  window.print();
+}
+printBtn.addEventListener('click',printCV);
+pdfBtn.addEventListener('click',printCV);
+
+function setLanguage(language){
+  currentLanguage=language;
+  const isEnglish=language==='en';
+  ar.hidden=isEnglish;
+  en.hidden=!isEnglish;
+
+  document.documentElement.lang=isEnglish?'en':'ar';
+  document.documentElement.dir=isEnglish?'ltr':'rtl';
+
+  updateToolbarLanguage();
+  document.title=isEnglish
+    ? 'Haitham Mohammad Mohammad Najad | IT Engineer'
+    : 'هيثم محمد محمد نجاد | مهندس تقنية معلومات';
+}
+
+langBtn.addEventListener('click',()=>{
+  setLanguage(currentLanguage==='ar'?'en':'ar');
+});
+
+window.addEventListener('beforeprint',()=>{});
+</script>
+
+
+</body>
+</html>
